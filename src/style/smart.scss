@@ -1,0 +1,42 @@
+.smart {
+  &__container {
+  }
+
+  &__content {
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      /*@media (max-width: $pc) {
+        width: 80vw;
+      }
+      @media (max-width: $tablet) {
+        width: 100vw;
+      }
+      @media (max-width: $mobile) {
+        width: 100vw;
+      }
+      @media (max-width: $mobileSmall) {
+        width: 100vw;
+      }*/
+    }
+  }
+}
+
+.container {
+}
+
+.subtitle-body {
+  &__subtitle {
+  }
+
+  &__text {
+  }
+}
+
+.subtitle {
+}
+
+.text {
+}

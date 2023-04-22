@@ -1,0 +1,124 @@
+.fire {
+  &__container {
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+  }
+
+  &__image {
+    position: relative;
+
+    &:before {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      width: 626px;
+      height: 401px;
+      top: 0;
+      left: 28%;
+      background: #B48755;
+      filter: blur(150px);
+      border-radius: 300px;
+      @media (max-width: $tablet) {
+        width: 500px;
+        height: 350px;
+        top: 0;
+        left: 18%;
+      }
+      @media (max-width: $mobile) {
+        width: 320px;
+        height: 200px;
+        top: 0;
+        left: 22%;
+      }
+      @media (max-width: $mobileSmall) {
+        width: 250px;
+        height: 160px;
+        top: 0;
+        left: 22%;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    @media (max-width: $tablet) {
+      padding: 0;
+      justify-content: space-around;
+    }
+    @media (max-width: $mobile) {
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media (max-width: $mobileSmall) {
+      padding: 0;
+    }
+  }
+
+  &__column {
+    display: flex;
+    align-items: center;
+    column-gap: 31px;
+    row-gap: 10px;
+    @media (max-width: $mobile) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      column-gap: 15px;
+      text-align: center;
+    }
+
+  }
+}
+
+.container {
+}
+
+.subtitle-body {
+  margin-bottom: 15px;
+
+  &__subtitle {
+    @include text(250, 40px, 60px, #ffffff);
+
+    @include grad(240.22deg, 31.8%, 97.73%);
+    letter-spacing: 0.07em;
+    margin-bottom: 18px;
+    text-align: center;
+    @media (max-width: $mobileSmall) {
+      @include text(250, 28px, 35px, #949494);
+    }
+
+  }
+
+  &__text {
+    @include text(300, 20px, 33px, #ffffff);
+    text-align: center;
+    letter-spacing: 0.03em;
+    @media (max-width: $mobileSmall) {
+      @include text(300, 16px, 28px, #ffffff);
+    }
+
+  }
+}
+
+.item-fire {
+  &__icon {
+  }
+
+  &__text {
+  }
+}

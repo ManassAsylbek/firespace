@@ -1,0 +1,88 @@
+.catalog {
+  &__container {
+    margin-top: 100px;
+  }
+
+  &__content {
+  }
+
+  &__description {
+    @include text(300, 20px, 44px, #ffffff);
+    text-align: center;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+
+  }
+
+  &__swiper {
+    overflow: hidden;
+  }
+}
+
+.p-top {
+  padding: 35px 0 0 0;
+}
+
+.container {
+}
+
+.title {
+}
+
+.text-left {
+}
+
+.button {
+  width: 284px;
+  height: 60px;
+  background: #ECCF94;
+  border-radius: 1px;
+  background: linear-gradient(270.21deg, rgba(236, 207, 148, 0.9) 18.08%, rgba(255, 103, 82, 0.8) 68.72%);
+
+  &__text {
+    @include text(500, 18px, 30px, #ffffff);
+    text-align: center;
+  }
+}
+
+.subtitle-body {
+  &_m-top {
+    margin-top: 13px;
+  }
+  &_padding{
+    padding: 90px 0 50px 0;
+  }
+
+  &__subtitle {
+  }
+}
+
+.m-top {
+  padding: 130px 0 45px 0;
+}
+
+.subtitle {
+}
+
+.swiper {
+  overflow: hidden;
+
+  &__item {
+  }
+}
+
+.swiper-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.swiper-slide {
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+}

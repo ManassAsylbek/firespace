@@ -1,0 +1,92 @@
+.fuel-block {
+  &__container {
+  }
+
+  &__content {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+
+    @media (max-width: $mobile) {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: 1fr;
+      gap: 50px;
+
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    @include text(400, 24px, 36px, #ffffff);
+    margin-bottom: 40px;
+
+    &_top-m {
+      @include text(400, 24px, 36px, #ffffff);
+
+    }
+  }
+
+  &__subtitle {
+    @include text(400, 14px, 27px, #ffffff);
+    margin-bottom: 40px;
+  }
+
+  &__image {
+    img {
+      width: 100%
+    }
+  }
+
+  &__block-2 {
+  }
+
+  &__swiper {
+    width: 100%;
+    height: 250px;
+    background: black;
+  }
+
+  &__block-3 {
+  }
+
+  &__block-4 {
+  }
+}
+
+.container {
+}
+
+.sub-block {
+  &__title {
+    @include text(400, 18px, 27px, #6D6D6D);
+    margin-top: 30px;
+    margin-bottom: 25px;
+
+    &_top-m {
+      @include text(400, 18px, 27px, #6D6D6D);
+      margin-bottom: 25px;
+      margin-top: 65px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    column-gap: 65px;
+  }
+
+  &__column {
+    li {
+      @include text(400, 14px, 27px, #FFFFFF);
+    }
+  }
+}
+
+.title {
+}

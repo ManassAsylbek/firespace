@@ -1,0 +1,134 @@
+.auto-fireplace {
+  &__container {
+    margin-top: 85px;
+    margin-bottom: 180px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $mobile) {
+      margin-top: 70px;
+      margin-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__content {
+    @media (max-width: $mobile) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+
+  }
+
+
+  &__title {
+    @include text(250, 64px, 80px, #949494);
+    letter-spacing: 0.05em;
+    @include grad(226.43deg, 49.37%, 97.73%);
+    margin-bottom: 25px;
+
+    @media (max-width: $pc) {
+      @include text(250, 50px, 68px, #949494);
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: $tablet) {
+      @include text(250, 40px, 55px, #949494);
+      letter-spacing: 0.05em;
+    }
+    @media (max-width: $mobile) {
+      text-align: center;
+    }
+    @media (max-width: $mobileSmall) {
+      @include text(250, 28px, 35px, #949494);
+      letter-spacing: 0.05em;
+      text-align: center;
+    }
+  }
+
+  &__price {
+    @include text(300, 18px, 40px, #FFCF7A);
+    letter-spacing: 0.05em;
+  }
+
+  span {
+    font-size: 35px;
+  }
+
+  &__row {
+    display: flex;
+    column-gap: 80px;
+    margin: 86px 0 0 0;
+    @media (max-width: $mobile) {
+      column-gap: 50px;
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  &__image {
+    position: relative;
+    max-width: 700px;
+
+    @media (max-width: $mobile) {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 500px;
+      height: 350px;
+    }
+    @media (max-width: $mobileSmall) {
+      width: 300px;
+      height: 250px;
+    }
+
+
+    &:before {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      width: 150px;
+      height: 100px;
+      top: 25%;
+      right: 40%;
+      background: #F7A949;
+      filter: blur(100px);
+      border-radius: 500px;
+      transform: rotate(161.87deg);
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      @media (max-width: $pc) {
+        max-width: 550px;
+      }
+      @media (max-width: $tablet) {
+        max-width: 450px;
+      }
+      @media (max-width: $mobileSmall) {
+        max-width: 300px;
+      }
+    }
+  }
+}
+
+
+

@@ -1,0 +1,225 @@
+.header {
+  &__container {
+  }
+
+  &__menu {
+    padding: 10px 0;
+    height: 90px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    column-gap: 50px;
+    @media (max-width: $mobile) {
+      display: flex;
+      justify-content: space-between;
+      height: 50px;
+    }
+
+  }
+}
+
+.menu {
+  &__body {
+    @media (max-width: $mobile) {
+      transform: translate(0px, -100%);
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: auto;
+      padding: 70px 10px 30px 10px;
+      &.menu-open{
+        transform: translate(0px, 0%);
+      }
+    }
+
+  }
+
+  &__list {
+    @media (min-width: $mobile) {
+      display: flex;
+      column-gap: 18px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    @media (max-width: $mobile) {
+      display: block;
+      height: 60px;
+      li {
+        margin: 0 0 40px 0;
+
+        &:last-child {
+          margin: 0 auto;
+          width: 100%;
+        }
+      }
+
+    }
+
+  }
+
+  &__link {
+    @include text(400, 13px, 16px, #949494);
+    text-align: right;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+    @media (min-width: $tablet) {
+      &:hover {
+        color: #FFCF7A;
+      }
+    }
+    @media (max-width: $mobile) {
+      font-size: 40px;
+      text-align: center;
+      display: block;
+    }
+  }
+
+  &__icon {
+  }
+
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  &:hover {
+    color: #FFCF7A;
+  }
+
+
+  &__title {
+    @include text(400, 20px, 70px, #FFF);
+    letter-spacing: 0.105em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    color: #6D6D6D;
+  }
+}
+
+
+//====================================================================================================
+/** Гамбургер иконка *!*/
+/*.icon-menu {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index:2;
+  overflow: hidden;
+}
+
+.icon-menu span {
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  transition: all 0.5s;
+}
+
+.icon-menu span:nth-of-type(2) {
+  top: calc(50% - 5px);
+}
+.icon-menu span:nth-of-type(3) {
+  top: calc(50% + 5px);
+}
+
+!* Меняем гамбургер иконку, когда меню открыто *!
+.icon-menu.active span:nth-of-type(1) {
+  display: none;
+}
+.icon-menu.active span:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);
+}
+.icon-menu.active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg);
+}*/
+
+/* Меню, которое будет появляться */
+/*.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  background: #FFEFBA;
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+}
+
+.menu.active {
+  transform: translateX(0);
+}
+
+.menu li {
+  list-style-type: none;
+}*/
+//====================================================================================================
+
+//Burger
+.icon-menu {
+  display: none;
+  @media (max-width: $mobile) {
+    display: block;
+    position: relative;
+    width: rem(30);
+    height: rem(18);
+    cursor: pointer;
+    z-index: 5;
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(2);
+      background-color: #fff;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: calc(50% - rem(1));
+    }
+    .menu-open & {
+      span {
+        width: 0;
+      }
+
+      &::before,
+      &::after {
+      }
+
+      &::before {
+        top: calc(50% - rem(1));
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        bottom: calc(50% - rem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
